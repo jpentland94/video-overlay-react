@@ -16,6 +16,34 @@ function VideoBlock() {
     setCurrentTime(currentVideoTime);
   };
 
+  // Array of images
+  const images = [
+    {
+      src: "./assets/images/image1.png",
+      alt: "bannana",
+      showTime: 3500,
+      hideTime: 5000,
+      appears: 1,
+      position: "top-left",
+    },
+    {
+      src: "./assets/images/image2.png",
+      alt: "controller",
+      showTime: 6000,
+      hideTime: 8000,
+      appears: 2,
+      position: "top-right",
+    },
+    {
+      src: "./assets/images/image3.png",
+      alt: "fire",
+      showTime: 7000,
+      hideTime: 8500,
+      appears: 3,
+      position: "centre",
+    },
+  ];
+
   return (
     <>
       <div className={styles.videoContainer}>
@@ -31,8 +59,17 @@ function VideoBlock() {
           />
           Sorry, your browser doesn't support embedded videos.
         </video>
-
-        <ShowImages currentTime={currentTime} />
+        {images?.map((image) => (
+          <ShowImages
+            currentTime={currentTime}
+            src={image.src}
+            alt={image.alt}
+            showTime={image.showTime}
+            hideTime={image.hideTime}
+            appears={image.appears}
+            position={image.position}
+          />
+        ))}
       </div>
 
       <p>Current time: {currentTime} seconds</p>
