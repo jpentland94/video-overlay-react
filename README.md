@@ -1,24 +1,28 @@
+# To start this project
 
+1. run `npm install`
+2. run `npm start`
 
-Clone (not fork) this repo and run `npm install` then run `npm start` to start.
+This task shows a video with images that appear at set timestamps. They will disappear at set timestamps and also they will only appear a set number of times. The background colour has been changed and if you hover over the video, the background colour of the body also changes.
 
-Render the video found in the public folder on the page. Make it as pretty (or as ugly) as you like. In the **public/images** folder you will find three images that should render in the following ways during the video playing. Timings are in reference to the current time of the video. Using a **native html5 video component** is preferred. You can also migrate the project to use typescript if you'd prefer (or create a separate react repository and import the assets).
-
-Images should render as follows:
+Images will render as follows:
 
 **Image 1**:
+
 - shows at **3500ms**
 - shows for **5000ms** (i.e. the image is visible from 3500ms-8500ms)
 - shows in **top left** of the video
 - \*\*shows up **once** (i.e. when rewinding it should not show up again)
 
 **Image 2:**
+
 - shows at **6000ms**
 - shows for **2000ms** (i.e. 6000ms-8000ms)
 - shows in **top right** of the video
 - \*\*shows up **twice**
 
 **Image 3:**
+
 - shows at **7000ms**
 - shows for **1500ms** (i.e. 7000ms-8500ms)
 - shows up in **centre** of the video
@@ -26,12 +30,16 @@ Images should render as follows:
 
 \*\* bonus objective
 
-Additional tasks:
-- Colour the background
-- Change the colour of the background when hovering over a specific element (such as the video).
+## Considerations going into the project
 
-Feel free to ask any questions, as well as to have fun and expand on the specification as much as you like (e.g. custom controls, fullscreen toggle button, a button that runs away from your cursor). 
+- Do the images need compressed? No they are small enough
+- How will I test my code? I will use Jest
+- Should I implememnt a CMS so the images can be changed? I do not have time or the project requirements do not specifify this
+- Does the project need TypeScript? I will implementn TypeScript to validate data being passed into components
 
-If you're struggling, take notes about areas you are having trouble with, proposed solutions you have considered etc.
+## Issues
 
-Please create a new git repository with your project and send us a link to it. Alongside this, please provide a screen recorded video or text-documented walkthrough and overview of your development process where you describe the process behind building the app and run through any thoughts you had, decisions you made, concerns that came up etc.
+- The images appear for a set number of seconds, but if you pause the video halfway through the image showing, it will disappear after its pre-set appearance time. This is because the setTimout function that helps time this, runs even if the video is paused. If I had more time, I would look into either:
+  a. passing through and checking to see if the video is paused or
+  b. add logic to only run the setTimout function if the image has showed for its full allocation depending on the vide current time
+- I would have liked more time to implement Jest and Typescript

@@ -1,0 +1,61 @@
+:root {
+  --color-bg: #111b32;
+  --color-text: #ffffff;
+  --color-blue: #3b49df;
+  --color-red: #df3b3b;
+  --color-green: #3bdf72;
+  --color-gray: #b5bdc4;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--color-text);
+  margin-top: 50px;
+}
+
+.App {
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+}
+
+body {
+  background-color: var(--color-bg);
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
