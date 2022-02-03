@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "../styles/Video.module.css";
+import ShowImages from "./ShowImages";
 
 function VideoBlock() {
   // I need to be able to reference the video
@@ -17,7 +18,7 @@ function VideoBlock() {
 
   return (
     <>
-      <div className="vide-container">
+      <div className={styles.videoContainer}>
         <video
           ref={videoRef}
           controls
@@ -30,6 +31,8 @@ function VideoBlock() {
           />
           Sorry, your browser doesn't support embedded videos.
         </video>
+
+        <ShowImages currentTime={currentTime} />
       </div>
 
       <p>Current time: {currentTime} seconds</p>

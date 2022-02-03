@@ -1,5 +1,12 @@
+.videoContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 video {
-  width: 800px;
+  position: relative;
+  width: 100%;
   background-color: #fff;
   border-radius: 6px;
 }
