@@ -1,4 +1,4 @@
-#To start this project
+# To start this project
 
 1. run `npm install`
 2. run `npm start`
@@ -30,15 +30,16 @@ Images will render as follows:
 
 \*\* bonus objective
 
-##Considerations going into the project
+## Considerations going into the project
 
 - Do the images need compressed? No they are small enough
 - How will I test my code? I will use Jest
 - Should I implememnt a CMS so the images can be changed? I do not have time or the project requirements do not specifify this
 - Does the project need TypeScript? I will implementn TypeScript to validate data being passed into components
 
-##Issues
+## Issues
 
 - The images appear for a set number of seconds, but if you pause the video halfway through the image showing, it will disappear after its pre-set appearance time. This is because the setTimout function that helps time this, runs even if the video is paused. If I had more time, I would look into either:
   a. passing through and checking to see if the video is paused or
   b. add logic to only run the setTimout function if the image has showed for its full allocation depending on the vide current time
+- I would have liked more time to implement Jest and Typescript

@@ -7,6 +7,8 @@ function VideoBlock() {
   const videoRef = useRef(null);
   // useState to handle our video timestamp
   const [currentTime, setCurrentTime] = useState(0);
+  // Used for hover state
+  // cosnt[(hover, setHovered)] = useState(false);
 
   // Runs everytime the video time changes
   const handleTimeUpdate = () => {
@@ -14,6 +16,11 @@ function VideoBlock() {
     const currentVideoTime = videoRef.current.currentTime.toFixed(2) * 1000;
     // Update our state
     setCurrentTime(currentVideoTime);
+  };
+
+  // Changes the bg of the page on video hover
+  const handleBackgroundChange = () => {
+    document.body.style.backgroundColor = "#5dbb63";
   };
 
   // Array of images
@@ -52,6 +59,7 @@ function VideoBlock() {
           controls
           className={styles.video}
           onTimeUpdate={handleTimeUpdate}
+          onMouseEnter={handleBackgroundChange}
         >
           <source
             src="./assets/Big_Buck_Bunny_1080_10s_5MB.mp4"
