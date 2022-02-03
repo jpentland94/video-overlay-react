@@ -1,11 +1,12 @@
-import './App.css';
+import VideoBlock from "./components/VideoBlock";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Insert app here :)
-      </header>
+      <main>
+        <h1>Hello! Welcome to my Virti task.</h1>
+        <VideoBlock />
+      </main>
     </div>
   );
 }
