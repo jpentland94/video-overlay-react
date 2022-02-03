@@ -35,7 +35,7 @@ Images will render as follows:
 - Do the images need compressed? No they are small enough
 - How will I test my code? I will use Jest
 - Should I implememnt a CMS so the images can be changed? I do not have time or the project requirements do not specifify this
-- Does the project need TypeScript? I will implementn TypeScript to validate data being passed into components
+- Does the project need TypeScript? I will implement TypeScript to validate data being passed into components
 
 ## Issues
 
