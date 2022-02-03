@@ -61,6 +61,7 @@ function VideoBlock() {
         </video>
         {images?.map((image) => (
           <ShowImages
+            key={image.alt}
             currentTime={currentTime}
             src={image.src}
             alt={image.alt}
@@ -72,7 +73,7 @@ function VideoBlock() {
         ))}
       </div>
 
-      <p>Current time: {currentTime} seconds</p>
+      {/* <p>Current time: {currentTime} seconds</p> */}
     </>
   );
 }
